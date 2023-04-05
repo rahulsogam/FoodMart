@@ -34,7 +34,6 @@ export const AddProduct = () => {
         formData.append('ImgName',selectedFileName)
         console.log(formData);
         try {
-            alert(formData.get('img'))
             Axios.post('/addProduct',formData, {
               headers: { 'Content-Type': 'multipart/form-data' }
             }).then((res) => {
@@ -44,16 +43,7 @@ export const AddProduct = () => {
           } catch (err) {
             console.log(err);
           }
-          resetForm()
         // alert(producDesc+productCat+productName+producPrice+selectedFileName+selectedImg);
-    }
-
-    function resetForm(){
-        setProductCat('')
-        setProductName('')
-        setselectedImg('')
-        setProductPrice('')
-        setProductDesc('')
     }
 
     return (

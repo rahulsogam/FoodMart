@@ -34,8 +34,8 @@ export const Register = () => {
                 Phone:Phone,
                 Role:'User'
              }).then((res) => {
-                alert(res.data=='User added successfully.');
-                if(res.data=='User added successfully.Please proceed to login.')
+                alert(res.data);
+                if(res.data=='User added successfully.')
                 {
                     navigate("/login")
                 }

@@ -62,7 +62,6 @@ export const Cart = () => {
                 navigate("/")
             }
             )
-            alert('Order Placed successfully...')
         }
     }
 
@@ -94,7 +93,7 @@ export const Cart = () => {
                                     <div class="cart-item-label">Subtotal</div><span class="text-xl font-weight-medium" id={i.product}   >{i.productPrice}.00</span>
                                 </div>
                                 <div class="px-3 my-3 text-center">
-                                    <div class="cart-item-label">Action</div><button class="text-xl btn-danger font-weight-medium" value={i.product} onClick={(e) => DeleteFromCart(e.target.value)} >Delete</button>
+                                    <div class="cart-item-label">Action</div><button class="text-xl btn-danger font-weight-medium" value={i.product} onClick={(e) => DeleteFromCart(e.target.value)} >Remove</button>
                                 </div>
 
                             </div>

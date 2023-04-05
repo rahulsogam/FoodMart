@@ -9,7 +9,6 @@ const[User,setUser]=useState('')
 const[Password,setPassword]=useState('')
 const Navigate= useNavigate()
   const Login=()=>{
-    alert("here")
     Axios.post("/verifyUser",
             {  Email: User,
                 pwd: Password,
@@ -30,7 +29,6 @@ const Navigate= useNavigate()
   }
 
   function passFlow(res){
-    alert(res.Role)
     localStorage.setItem('user', JSON.stringify(res))
     // let userData=JSON.parse(localStorage.getItem('user'))
     // console.log(userData.Address)

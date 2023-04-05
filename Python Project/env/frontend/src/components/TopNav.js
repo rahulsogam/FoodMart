@@ -6,7 +6,7 @@ import { Axios } from '../AxiosConfig';
 export const TopNav = ({cartCount}) => {
 
     let userData= JSON.parse(localStorage.getItem("user"));
-
+    console.log(cartCount)
     const navigate= useNavigate()
     const gotoCart=()=>{
         if(userData.Role=='User'){

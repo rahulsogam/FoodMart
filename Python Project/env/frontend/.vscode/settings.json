@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/47013edb-7bef-45c5-9f37-5ac829d75360/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/FoodMart",
+    "appService.deploySubpath": "."
+}

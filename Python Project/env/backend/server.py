@@ -127,9 +127,10 @@ def GetCartCount():
         count=0
         email={'email':data['Email']}
         status={"status":0}
+        
         if (db.Cart.count_documents(email)!=0):
-            print("here----",db.Cart.count_documents(status))
-            count=db.Cart.count_documents(status)
+            print("here----",db.Cart.count_documents({'email':data['Email'],'status':0,}))
+            count=db.Cart.count_documents({'email':data['Email'],'status':0})
         return ({"msg":count})
     except Exception as ex:
         print(ex)
@@ -162,14 +163,12 @@ def addToCart():
         status={"status":0}
         print()
         if (db.Cart.count_documents(email)!=0):
-            if(db.Cart.count_documents({"product":data['product'],"status":0}))>0:
+            if(db.Cart.count_documents({'email':data['Email'],"product":data['product'],"status":0}))>0:
                     return("Product already added to Cart",200)
             else:
                 db.Cart.insert_one({"email":data['Email'],"product":data['product'],"status":0,'date':datetime.today().strftime('%d-%m-%y'),"productPrice":data['productPrice']})
                 return("Product added successfully.",200)
-        else:
-            db.Cart.insert_one({"email":data['Email'],"product":data['product'],"status":0,'date':datetime.today().strftime('%d-%m-%y'),"productPrice":data['productPrice']})
-            return("Product added successfully.",200)
+        
             
     except Exception as ex:
         print(ex)
