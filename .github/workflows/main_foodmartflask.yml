@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'foodMartFlask'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C7BE6179AC4A413F8D70386989743BC7 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EC2E93385E7746F6AB3B29BF3686D292 }}
           package: .
